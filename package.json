@@ -1,0 +1,39 @@
+{
+  "name": "webm-encrypt",
+  "version": "1.0.0",
+  "description": "Package used for encrypting and decrypting webm files",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "NODE_ENV=production npm run build"
+  },
+  "directories": {
+    "bin": "bin",
+    "lib": "lib"
+  },
+  "bin": {
+    "webme": "bin/webme"
+  },
+  "dependencies": {
+    "ebml-stream": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.10.1",
+    "typescript": "^3.0.3"
+  },
+  "keywords": [
+    "webm",
+    "matroska",
+    "encrypt",
+    "decrypt"
+  ],
+  "repository": "github:austinleroy/webm-encrypt",
+  "author": "Austin Blake",
+  "contributors": [
+    "Austin Blake <austin.leroy@hotmail.com>"
+  ],
+  "license": "ISC"
+}
