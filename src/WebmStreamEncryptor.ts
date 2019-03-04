@@ -44,7 +44,8 @@ export class WebmStreamEncryptor extends PassThrough {
         this._transformPipeline = pipeline(
             decoder,
             new WebmTagEncryptor(mode, key, options),
-            new EbmlStreamEncoder()
+            new EbmlStreamEncoder(),
+            () => { }
         );
 
         this.on('pipe', (source: Readable) => {
